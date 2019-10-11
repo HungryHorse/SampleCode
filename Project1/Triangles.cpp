@@ -21,7 +21,7 @@ enum Attrib_IDs { vPosition = 0 };
 GLuint  VAOs[NumVAOs];
 GLuint  Buffers[NumBuffers];
 
-const GLuint  NumVertices = 6;
+const GLuint  NumVertices = 24;
 
 //----------------------------------------------------------------------------
 //
@@ -37,8 +37,14 @@ init(void)
 	glBindVertexArray(VAOs[Triangles]);
 
 	GLfloat  vertices[NumVertices][2] = {
-		{ -0.90f, -0.90f }, {  0.85f, -0.90f }, { -0.90f,  0.85f },  // Triangle 1
-		{  0.90f, -0.85f }, {  0.90f,  0.90f }, { -0.85f,  0.90f }   // Triangle 2
+		{ -0.99f,  0.40f }, {  -0.99f, 0.39f }, { 0.99f,  0.40f },  // Triangle 1
+		{ -0.99f,  0.39f }, {   0.99,   0.39f }, { 0.99f,  0.40f }, // Triangle 2
+		{ -0.99f,  -0.40f }, {  -0.99f, -0.39f }, { 0.99f,  -0.40f },  // Triangle 3
+		{ -0.99f,  -0.39f }, {   0.99,   -0.39f }, { 0.99f,  -0.40f }, // Triangle 4
+		{ 0.40f, -0.99f }, {  0.39f, -0.99f}, { 0.40f, 0.99f },  // Triangle 5
+		{ 0.39f, -0.99f }, {  0.39f, 0.99 }, { 0.40f, 0.99f }, // Triangle 6
+		{ -0.40f, -0.99f }, {  -0.39f, -0.99f }, { -0.40f, 0.99f },  // Triangle 7
+		{  -0.39f, -0.99f }, {   -0.39f, 0.99 }, { -0.40f, 0.99f }, // Triangle 8
 	};
 
 	glGenBuffers(NumBuffers, Buffers);
